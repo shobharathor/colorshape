@@ -19,9 +19,12 @@ body{
     padding:5px 5px;
     border:2px solid black;
     position: relative;
-    height: 50%;
+    height: 300px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    min-width: 290px;
+    min-height: 300px;
 }
 i{
     font-size: 1000%;
@@ -29,12 +32,14 @@ i{
     left:25%;
     top:20%;
     border: 3px solid black;
+   
 } 
 button{
     width:15%;
     height:10%;
     padding:10px 5px;
     background-color: chartreuse;
-     font-size: 15px;
+     font-size: 12px;
+     min-width: 240px;
 }
 

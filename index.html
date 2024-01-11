@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <title>change color & shape</title>
+</head>
+<body>
+     <div id="box" style="color:rgb(34, 0, 128)">
+     <i class="ri-vip-diamond-fill"  style="color:green"  id="icon" ></i>
+    </div>
+    <button>Change backgroundcolor and shape</button>
+
+    <script>
+        const btn = document.querySelector('button');
+        const icon = document.getElementById("icon");
+        const box = document.getElementById("box");
+        const shapes = ['ri-vip-diamond-fill',"ri-home-fill","ri-chat-1-fill","ri-square-fill","ri-circle-fill"];
+    btn.addEventListener('click',function(){
+        icon.className = shapes[Math.floor(Math.random() * 5)];
+         icon.style = `color:${getRandomColor()}`;
+         box.style.backgroundColor = getRandomColor();
+
+        
+    });
+    function getRandomColor() {
+        // Generate a random color in hex format
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    </script>
+    
+</body>
+</html>
